@@ -1,0 +1,16 @@
+.firstDiv{
+  color: blue;
+}
+
+.seconddiv{
+  color: red;
+}
+
+#singledout{
+  color: green;
+  text-decoration: line-through;
+}
+
+/* *{
+  color: black;
+} */
