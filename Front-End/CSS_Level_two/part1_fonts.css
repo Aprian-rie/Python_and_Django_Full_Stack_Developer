@@ -1,0 +1,22 @@
+h1 {
+  font-family: 'Fuggles', cursive;
+}
+
+
+body{
+  font-size: 20px;
+}
+
+#two{
+  font-size: 1.0em;
+}
+
+/* 1em = 16pixels */
+
+p{
+  font-family: 'Fuggles', cursive;
+}
+
+h1{
+  text-align: center;
+}

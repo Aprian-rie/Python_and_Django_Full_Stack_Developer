@@ -1,0 +1,30 @@
+h1{
+  font-family: 'Croissant One', cursive;
+  text-align: center;
+}
+
+.art{
+  margin: auto;
+}
+
+td{
+  height: 300px;
+  width: 150px;
+  border: 6px solid white;
+}
+
+#one {
+  background-color: #13293D
+}
+#two {
+  background-color: #006494
+}
+#three {
+  background-color: #247BA0
+}
+#four {
+  background-color: #1B98E0
+}
+#five {
+  background-color: #E8F1F2
+}
