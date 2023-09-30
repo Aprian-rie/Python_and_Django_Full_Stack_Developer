@@ -45,7 +45,7 @@ The output will be as follows:
 
 ### Integers
 Javascript can act as a basic calculator as it can perform all the basic arithmetics such as
-division, multiplication, addition and subtraction. 
+division, multiplication, addition and subtraction.
 
 It can also perform exponential operation (2 ** 4) and the modulo operation, that is it returns
 the remainder of a division 15 % 14 returns 1.
@@ -58,3 +58,18 @@ Obtaining the length of a string is string.length
 special escape character "\n" starts a new line and "\t" inserts a tab (4 spaces)
 
 indexing a string starts at zero eg "hello"[0] returns "h"
+
+### Variables 
+The general form of variables in Javascript is of the form
+```commandline
+var varName = value; (The semicolon is not necessary)
+```
+Javascript uses camel case as the naming convention.
+``eg var bankAccount = 100;``
+So I have a variable called bankAccount which has a value of 100.
+
+Some common Javasript functions
+- alert()
+- console.log()
+- prompt()
+
