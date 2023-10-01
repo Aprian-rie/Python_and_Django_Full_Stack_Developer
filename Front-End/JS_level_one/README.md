@@ -73,4 +73,61 @@ Some common Javascript functions
 - console.log()
 - prompt()
 
- 
+### Control Flow
+When dealing with control flow, we are going to initiate some condition check that returns a boolean,
+either True or False
+Based off those results we use control flow to execute a specific block of code.
+
+```commandline
+IF statement
+if (condition){
+    //Execute some code
+}
+
+IF ELSE statement
+if (condition){
+    //Execute some code
+}else{
+    //Execute some other code
+}
+
+IF, ELSE IF, ELSE statement
+if (condition one){
+    //Execute some code
+}else if (condition two){
+    //Execute some other code
+}else{
+    //Execute some backup code
+}
+```
+
+```commandline
+While Loop
+while (condition){
+    // Execute some code while
+    // this condition is true
+}
+```
+
+### For Loops
+For loops allow you to continually execute code a specific number of times.
+
+Javascript has three types of For Loops:
+
+- For - loops through a number of times
+- For/In - loops through a JS object
+- For/of - used with arrays
+
+```commandline
+For Loop
+
+for (statement1; statement2; statement3){
+    // Execute some code
+}
+
+Example
+for (var i = 0; i<5; i++){
+    // Execute some code
+}
+```
+
