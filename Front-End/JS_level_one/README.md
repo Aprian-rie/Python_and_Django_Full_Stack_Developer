@@ -68,8 +68,9 @@ Javascript uses camel case as the naming convention.
 ``eg var bankAccount = 100;``
 So I have a variable called bankAccount which has a value of 100.
 
-Some common Javasript functions
+Some common Javascript functions
 - alert()
 - console.log()
 - prompt()
 
+ 
