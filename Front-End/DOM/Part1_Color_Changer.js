@@ -29,7 +29,7 @@ function getRandomColor(){
 
 // Simple function for clarity
 function changeHeaderColor(){
-  colorInput = getRandomColor()
+  colorInput = getRandomColor();
   header.style.color = colorInput;
 }
 
