@@ -71,5 +71,53 @@ calling  a function for every element in an array
 arr.forEach(alert);
 // Calls alert 3 times for every element there
 ```
+### Objects
+JS Objects are hash-tables, they store information in a key-value pair.
+
+In other languages this is sometimes also called a dictionary. Unlike an array JS Object does
+NOT retain any ordering.
+
+The name "Object" can sometimes be confusing when coming from another language because it sounds
+so generic, so keep that in mind.
+
+The typical JS object is in the form
+
+``{key1: "Value one", key2: "value two", .....}``
+
+You then can access values through their corresponding key.
+
+#### Object Methods
+Object methods are essentially functions that are inside of an Object.
+
+Example
+```python
+var carInfo = {
+    make: "Toyota",
+    year: 1990,
+    model: "Camry",
+    carAlert: function(){
+        alert("We've got a car here!")
+    }
+};
+```
+
+More realistically you will want to use key value pais from the object itself, in that case
+you use the special <strong>this</strong> keyword.
+
+The this keyword acts differently depending on the situation. For a JS Object, the this is set
+to the object the method is called on.
+
+For example:
+```javascript
+var myObj = {
+    prop: 37,
+    reportProp: function(){
+        return this.prop;
+    }
+};
+console.log(myObj.reportProp()); //logs 37
+```
+
+
 
 

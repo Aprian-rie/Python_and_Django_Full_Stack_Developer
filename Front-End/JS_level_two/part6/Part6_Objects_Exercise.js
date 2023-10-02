@@ -8,7 +8,10 @@
 var employee = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  nameLength: function () {
+    console.log(this.name.length);
+  }
 }
 
 // Add a method called nameLength that prints out the
@@ -20,11 +23,12 @@ var employee = {
 /////////////////
 
 // Given the object:
-var employee = {
+var employee2 = {
   name: "John Smith",
   job: "Programmer",
   age: 31
 }
+alert("Name is "+employee2["name"]+", Job is "+employee2["job"]+", Age is "+employee2["age"]+".")
 
 // Write program that will create an Alert in the browser of each of the
 // object's values for the key value pairs. For example, it should alert:
@@ -38,10 +42,14 @@ var employee = {
 /////////////////
 
 // Given the object:
-var employee = {
+var employee3 = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  lastName: function () {
+    nameArray = this.name.split(" ")
+    console.log(nameArray[1]);
+  }
 }
 
 // Add a method called lastName that prints
