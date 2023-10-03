@@ -16,3 +16,26 @@ This DOM will allow us to use Javascript to interact with the web page.
 The DOM is enormous, most developers won't use all the properties.
 
 The common objects used will be covered.
+
+### Events 
+Listening for an event looks like this:
+
+``myvariable.addEventListener(event, func);``
+
+Example
+
+```text
+var head = document.querySelector('h1');
+head.addEventListener("click", changeColor);
+```
+There are many possible events!
+
+- Clicks
+- Hovers
+- Double Clicks
+- Drags
+- etc !
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/Events">Mozilla Link to the events</a>
+
+
