@@ -56,3 +56,7 @@ run to it a lot in the real world!
 
 ### Basic jQuery
 How to interact with the DOM with jQuery!
+
+
+### jQuery Events
+
