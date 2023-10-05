@@ -4,7 +4,7 @@
 
 
 # Complete the tasks below by writing functions! Keep in mind, these can be
-# really tough, its all about breaking the problem down into smaller, logical
+# really tough, it's all about breaking the problem down into smaller, logical
 # steps. If you get stuck, don't feel bad about having to peek to the solutions!
 
 #####################
@@ -16,14 +16,22 @@
 
 # For example:
 
-# arrayCheck([1, 1, 2, 3, 1]) → True
-# arrayCheck([1, 1, 2, 4, 1]) → False
-# arrayCheck([1, 1, 2, 1, 2, 3]) → True
 
 def arrayCheck(nums):
-    # CODE GOES HERE
+    if 1 in nums and 2 in nums and 3 in nums:
+        return True
+    else:
+        return False
 
 
+print(arrayCheck([1, 1, 2, 3, 1]))
+print(arrayCheck([1, 1, 2, 4, 1]))
+print(arrayCheck([1, 1, 2, 1, 2, 3]))
+
+
+# True
+# False
+# True
 #####################
 ## -- PROBLEM 2 -- ##
 #####################
@@ -33,13 +41,22 @@ def arrayCheck(nums):
 
 # For example:
 
-# stringBits('Hello') → 'Hlo'
-# stringBits('Hi') → 'H'
-# stringBits('Heeololeo') → 'Hello'
 
 def stringBits(str):
-  # CODE GOES HERE
+    new_str = ""
+    for l in range(0, len(str), 2):
+        new_str += str[l]
+    print(new_str)
 
+
+stringBits('Hello')
+stringBits('Hi')
+stringBits('Heeololeo')
+
+
+# → 'Hlo'
+# → 'H'
+# → 'Hello'
 
 #####################
 ## -- PROBLEM 3 -- ##
@@ -59,8 +76,24 @@ def stringBits(str):
 
 
 def end_other(a, b):
-  # CODE GOES HERE
+    lower_a = a.lower()
+    lower_b = b.lower()
+    lower_a_compared = ""
+    lower_b_compared = ""
+    if len(a) >= len(b):
+        for la in range(len(lower_a) - 1, (len(lower_a) - 1) - (len(lower_b)), -1):
+            lower_a_compared += lower_a[la]
+        print(lower_a_compared[::-1] == lower_b)
+    else:
+        for lb in range(len(lower_b) - 1, (len(lower_b) - 1) - (len(lower_a)), -1):
+            lower_b_compared += lower_b[lb]
+        print(lower_b_compared[::-1] == lower_a)
 
+
+end_other('AbC', 'HiaBc')
+end_other('abc', 'abXabc')
+end_other('AbC', 'HiaBc')
+end_other('abcde', 'weweweabcde')
 #####################
 ## -- PROBLEM 4 -- ##
 #####################
@@ -72,8 +105,9 @@ def end_other(a, b):
 # doubleChar('AAbb') → 'AAAAbbbb'
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
-def doubleChar(str):
-  # CODE GOES HERE
+# def doubleChar(str):
+#
+#   # CODE GOES HERE
 
 
 #####################
@@ -97,10 +131,12 @@ def doubleChar(str):
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
-def no_teen_sum(a, b, c):
-  # CODE GOES HERE
-def fix_teen(n):
-  # CODE GOES HERE
+# def no_teen_sum(a, b, c):
+#
+#   # CODE GOES HERE
+# def fix_teen(n):
+#
+#   # CODE GOES HERE
 
 #####################
 ## -- PROBLEM 6 -- ##
@@ -114,5 +150,6 @@ def fix_teen(n):
 # count_evens([2, 2, 0]) → 3
 # count_evens([1, 3, 5]) → 0
 
-def count_evens(nums):
-  # CODE GOES HERE
+# def count_evens(nums):
+#
+#   # CODE GOES HERE
