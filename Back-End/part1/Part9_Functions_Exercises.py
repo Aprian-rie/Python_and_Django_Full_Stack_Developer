@@ -17,11 +17,18 @@
 # For example:
 
 
+# def arrayCheck(nums):
+#     if 1 in nums and 2 in nums and 3 in nums:
+#         return True
+#     else:
+#         return False
+
 def arrayCheck(nums):
-    if 1 in nums and 2 in nums and 3 in nums:
-        return True
-    else:
-        return False
+
+    for i in range(len(nums) - 2):
+        if nums[i] == 1 and nums[i+1] == 2 and nums[i+2] == 3:
+            return True
+    return False
 
 
 print(arrayCheck([1, 1, 2, 3, 1]))
@@ -75,19 +82,25 @@ stringBits('Heeololeo')
 # end_other('abc', 'abXabc') → True
 
 
-def end_other(a, b):
-    lower_a = a.lower()
-    lower_b = b.lower()
-    lower_a_compared = ""
-    lower_b_compared = ""
-    if len(a) >= len(b):
-        for la in range(len(lower_a) - 1, (len(lower_a) - 1) - (len(lower_b)), -1):
-            lower_a_compared += lower_a[la]
-        print(lower_a_compared[::-1] == lower_b)
-    else:
-        for lb in range(len(lower_b) - 1, (len(lower_b) - 1) - (len(lower_a)), -1):
-            lower_b_compared += lower_b[lb]
-        print(lower_b_compared[::-1] == lower_a)
+# def end_other(a, b):
+#     lower_a = a.lower()
+#     lower_b = b.lower()
+#     lower_a_compared = ""
+#     lower_b_compared = ""
+#     if len(a) >= len(b):
+#         for la in range(len(lower_a) - 1, (len(lower_a) - 1) - (len(lower_b)), -1):
+#             lower_a_compared += lower_a[la]
+#         print(lower_a_compared[::-1] == lower_b)
+#     else:
+#         for lb in range(len(lower_b) - 1, (len(lower_b) - 1) - (len(lower_a)), -1):
+#             lower_b_compared += lower_b[lb]
+#         print(lower_b_compared[::-1] == lower_a)
+
+def end_other(a,b):
+    a = a.lower()
+    b = b.lower()
+
+    return a[-(len(b)):] == b or a == b[-(len(a)):]
 
 
 end_other('AbC', 'HiaBc')
@@ -105,10 +118,15 @@ end_other('abcde', 'weweweabcde')
 # doubleChar('AAbb') → 'AAAAbbbb'
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
-# def doubleChar(str):
-#
-#   # CODE GOES HERE
+def doubleChar(str):
+    new_str = ""
+    for char in str:
+        new_str += char * 2
+    print(new_str)
 
+doubleChar('The')
+doubleChar('AAbb')
+doubleChar('Hi-There')
 
 #####################
 ## -- PROBLEM 5 -- ##
@@ -131,13 +149,21 @@ end_other('abcde', 'weweweabcde')
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
-# def no_teen_sum(a, b, c):
-#
-#   # CODE GOES HERE
-# def fix_teen(n):
-#
-#   # CODE GOES HERE
+def no_teen_sum(a, b, c):
+    return fix_teen(a) + fix_teen(b) + fix_teen(c)
 
+def fix_teen(n):
+    teens = []
+    for i in range(13, 20):
+        teens.append(i)
+    if n == 15 or n == 16:
+        pass
+    elif n in teens:
+        n = 0
+    return n
+print(no_teen_sum(1, 2, 3))
+print(f"sum is {no_teen_sum(2, 13, 1)}")
+print(no_teen_sum(2, 1, 14))
 #####################
 ## -- PROBLEM 6 -- ##
 #####################
@@ -150,6 +176,12 @@ end_other('abcde', 'weweweabcde')
 # count_evens([2, 2, 0]) → 3
 # count_evens([1, 3, 5]) → 0
 
-# def count_evens(nums):
-#
-#   # CODE GOES HERE
+def count_evens(nums):
+    count = 0
+    for num in nums:
+        if num % 2 == 0:
+            count+= 1
+    print(count)
+count_evens([2, 1, 2, 3, 4])
+count_evens([2, 2, 0])
+count_evens([1, 3, 5])
